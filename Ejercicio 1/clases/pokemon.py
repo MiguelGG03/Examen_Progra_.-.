@@ -3,9 +3,10 @@ class pokemon:
         self.id=id
         self.name=name
         self.weapon=weapon
-        #puñetazo,patada,codazo,cabezazo
+        #puñetazo(1),patada(2),codazo(3),cabezazo(4)
         self.hp=hp
-        #health points
+        #health points(1/100)
         self.dap=dap
-        #damage points
+        #damage points(1/10)
         self.dep=dep
+        #defense points(1/10)
