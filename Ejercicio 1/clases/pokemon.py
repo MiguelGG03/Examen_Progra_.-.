@@ -1,3 +1,4 @@
+from clases.tipo_ataque import *
 class pokemon:
     
     def __init__(self,id,name,weapon,hp,DAP,DEP):

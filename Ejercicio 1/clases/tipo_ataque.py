@@ -1,3 +1,4 @@
 class Ataque:
     def __init__(self):
-        print()
+        PUÑETAZO= Ataque.Enum
+        CABEZAZO= Ataque.Enum
