@@ -2,5 +2,10 @@ from enum import Enum
 
 
 class Ataque(Enum):
-    def __init__(self):
-        #puñetazo(1),patada(2),codazo(3),cabezazo(4)
+    PUÑETAZO = 1
+    PATADA = 2
+    CODAZO = 3
+    CABEZAZO = 4
+
+    Ataque= Enum('Ataque','PUÑETAZO PATADA CODAZO CABEZAZO')
+    
