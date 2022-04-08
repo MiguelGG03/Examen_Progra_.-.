@@ -16,8 +16,3 @@ class pokemon:
         self.dep=DEP
         #defense points(1/10)
 
-    def crear_pokemon(self,new_hp):
-        if(self.hp>100 or self.hp<1):
-            print('La vida debe ser un entero entre el 1 y el 100')
-        else:
-            self.hp=new_hp
