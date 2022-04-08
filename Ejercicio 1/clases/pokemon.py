@@ -16,3 +16,7 @@ class pokemon:
         self.dep=DEP
         #defense points(1/10)
 
+    def elegir_ataque(self,pregunta):
+        pregunta=input('Seleccione el ataque:\nPUÑETAZO \nPATADA \nCODAZO \nCABEZAZO\n-')
+        self.pregunta=pregunta
+        Ataque.tipo_ataque(pregunta)
