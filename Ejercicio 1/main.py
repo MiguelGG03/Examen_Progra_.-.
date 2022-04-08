@@ -1,4 +1,4 @@
-from clases.iniciador import *
+from clases.pokemon import *
 
 if __name__=='__main__':
-    iniciador.main()
+    

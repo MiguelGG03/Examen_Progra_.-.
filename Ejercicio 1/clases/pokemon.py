@@ -1,4 +1,7 @@
 from clases.tipo_ataque import *
+
+ids_pokemons=[]
+
 class pokemon:
     
     def __init__(self,id,name,weapon,hp,DAP,DEP):
@@ -13,6 +16,8 @@ class pokemon:
         self.dep=DEP
         #defense points(1/10)
 
-    def crear_pokemon(self,vida):
-        if(self.vida>100 or self.vida<1):
+    def crear_pokemon(self,new_hp):
+        if(self.hp>100 or self.hp<1):
             print('La vida debe ser un entero entre el 1 y el 100')
+        else:
+            self.hp=new_hp
