@@ -69,7 +69,8 @@ class Pokemon():
       >>> obj_Pokemon = Pokemon(1, "Bulbasaur", WeaponType.PUNCH, 100, 7, 10)
     """
     def __init__(self,id, pokemon_name, weapon_type, health_points,attack_rating, defense_rating):
-        self.id=id
+        if isinstance(id,str):
+            self.id=id
         self.pokemon_name=pokemon_name
         self.weapon_type=weapon_type
         self.health_points=health_points
