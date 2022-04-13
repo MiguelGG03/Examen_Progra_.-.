@@ -70,7 +70,7 @@ class Pokemon():
       >>> obj_Pokemon = Pokemon(1, "Bulbasaur", WeaponType.PUNCH, 100, 7, 10)
     """
     def __init__(self,id, pokemon_name, weapon_type, health_points,attack_rating, defense_rating):
-        if isinstance(id,str):
+        if (isinstance(id,int)==True):
             if(id not in Pokemon.global_ids):
                 self.id=id
                 Pokemon.global_ids.append(self.id)
@@ -79,7 +79,10 @@ class Pokemon():
                 # "raise" es para hacer saltar un error
         else:
             raise TypeError("El parametro id deberia ser un valor entero")
-        self.pokemon_name=pokemon_name
+        if(isinstance(pokemon_name,str)==True):
+            self.pokemon_name=pokemon_name
+        else:
+            raise TypeError("El nombre deberia ser un string")
         self.weapon_type=weapon_type
         self.health_points=health_points
         self.attack_rating=attack_rating
