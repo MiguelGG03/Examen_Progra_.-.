@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 from classes.pokemon import *
 
+from enum import Enum
+
 """
 This Python module contains not only the Enum WeaponType, but also the test of
 this Python class.
@@ -35,7 +37,7 @@ this Python class.
 
 
 
-class WeaponType():
+class WeaponType(Enum):
     
     PUNCH = 2
     KICK = 4
