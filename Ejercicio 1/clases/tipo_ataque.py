@@ -7,8 +7,6 @@ class Ataque(Enum):
     CODAZO = 6
     CABEZAZO = 10
 
-    Ataque= Enum('Ataque','PUÑETAZO PATADA CODAZO CABEZAZO')
-
     def __str__(self):
         return self.name
 
