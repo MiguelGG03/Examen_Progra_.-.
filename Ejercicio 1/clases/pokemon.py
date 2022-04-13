@@ -53,6 +53,15 @@ class pokemon:
         print("Pokemon ID"+str(self.id)+" cuyo nombre es "+self.pokemon_name+" tiene como ataque asignado"+
                 str(self.weapon_type.upper())+" y "+self.health_points+" puntos de vida.")
 
+    def is_alive(self):
+        if(self.health_points>=1):
+            return True
+        else:
+            return False
+
+    def fight_attack(self,Pokemon,pokemon_to_attack):
+        print()
+
     def elegir_ataque(self,pregunta):
         pregunta=input('Seleccione el ataque:\nPUÑETAZO \nPATADA \nCODAZO \nCABEZAZO\n-')
         if(isinstance(pregunta,str)==True):
