@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+import enum
 
 """
 This Python module contains not only the Enum WeaponType, but also the test of
