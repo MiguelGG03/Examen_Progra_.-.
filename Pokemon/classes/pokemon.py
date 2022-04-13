@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from clases.weapon_type import *
+from classes.weapon_type import *
 
 """
 This Python module contains not only the class Pokemon, but also the test of
@@ -89,7 +89,14 @@ class Pokemon():
             self.weapon_type=weapon_type
         else:
             raise TypeError("El tipo de ataque no pertenece a la clase /WeaponType/")
-        self.health_points=health_points
+                
+        if(isinstance(health_points,int)==True):
+            if(1<=health_points<=100):
+                self.health_points=health_points
+            else:
+                raise ValueError("La vida del poquemon debe estar entre 1 y 100")
+        else:
+            raise TypeError("La vida debe ser un valor entero")
         self.attack_rating=attack_rating
         self.defense_rating=defense_rating
 
