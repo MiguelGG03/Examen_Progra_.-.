@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+from clases.WeaponType import *
 
 """
 This Python module contains not only the class Pokemon, but also the test of
@@ -79,11 +79,16 @@ class Pokemon():
                 # "raise" es para hacer saltar un error
         else:
             raise TypeError("El parametro id deberia ser un valor entero")
+
         if(isinstance(pokemon_name,str)==True):
             self.pokemon_name=pokemon_name
         else:
             raise TypeError("El nombre deberia ser un string")
-        self.weapon_type=weapon_type
+
+        if(isinstance(weapon_type,WeaponType)==True):
+            self.weapon_type=weapon_type
+        else:
+            raise TypeError("El tipo de ataque no pertenece a la clase /WeaponType/")
         self.health_points=health_points
         self.attack_rating=attack_rating
         self.defense_rating=defense_rating
