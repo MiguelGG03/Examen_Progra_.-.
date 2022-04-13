@@ -97,9 +97,22 @@ class Pokemon():
                 raise ValueError("La vida del poquemon debe estar entre 1 y 100")
         else:
             raise TypeError("La vida debe ser un valor entero")
-        self.attack_rating=attack_rating
-        self.defense_rating=defense_rating
-
+        
+        if(isinstance(attack_rating,int)==True):
+            if(1<=attack_rating<=100):
+                self.attack_rating=attack_rating
+            else:
+                raise ValueError("La vida del poquemon debe estar entre 1 y 100")
+        else:
+            raise TypeError("La vida debe ser un valor entero")
+        
+        if(isinstance(defense_rating,int)==True):
+            if(1<=defense_rating<=100):
+                self.defense_rating=defense_rating
+            else:
+                raise ValueError("La vida del poquemon debe estar entre 1 y 100")
+        else:
+            raise TypeError("La vida debe ser un valor entero")
 
 
 
