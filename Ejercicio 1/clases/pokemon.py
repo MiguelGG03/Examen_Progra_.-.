@@ -49,7 +49,14 @@ class pokemon:
         else:
             raise TypeError("La vida debe ser un valor entero")
 
+    def leer_stats_pokemon(self):
+        print("Pokemon ID"+str(self.id)+" cuyo nombre es "+self.pokemon_name+" tiene como ataque asignado"+
+                str(self.weapon_type.upper())+" y "+self.health_points+" puntos de vida.")
+
     def elegir_ataque(self,pregunta):
         pregunta=input('Seleccione el ataque:\nPUÑETAZO \nPATADA \nCODAZO \nCABEZAZO\n-')
-        self.pregunta=pregunta
-        Ataque.tipo_ataque(pregunta)
+        if(isinstance(pregunta,str)==True):
+            self.pregunta=pregunta
+            Ataque.tipo_ataque(pregunta)
+        else:
+            raise TypeError("La resupesta debe ser un string")
