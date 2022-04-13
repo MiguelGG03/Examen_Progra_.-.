@@ -36,6 +36,7 @@ this Python class.
 
 
 class Pokemon():
+    global_ids=[]
     """Python class to implement a basic version of a Pokemon of the game.
 
     This Python class implements the basic version of a Pokemon of the game.
@@ -70,7 +71,14 @@ class Pokemon():
     """
     def __init__(self,id, pokemon_name, weapon_type, health_points,attack_rating, defense_rating):
         if isinstance(id,str):
-            self.id=id
+            if(id not in Pokemon.global_ids):
+                self.id=id
+                Pokemon.global_ids.append(self.id)
+            else:
+                raise ValueError("El id del pokemon deberia ser uno nuevo id y no uno repetido de otro pokemon.")
+                # "raise" es para hacer saltar un error
+        else:
+            raise TypeError("El parametro id deberia ser un valor entero")
         self.pokemon_name=pokemon_name
         self.weapon_type=weapon_type
         self.health_points=health_points

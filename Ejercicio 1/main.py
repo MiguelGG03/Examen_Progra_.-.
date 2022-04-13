@@ -3,7 +3,7 @@ import csv
 
 def crear_entrenador1(entrenador):
     try:
-        with open('coach_1_pokemons.csv', newline='') as csv:
+        with open('coach_1_pokemons.csv', newline='') as csv_file:
             lector= csv.reader('coach_1_pokemons.csv')
             info_entrenador_1=list(lector)
             for temp_pokemon_csv in info_entrenador_1:
@@ -16,7 +16,7 @@ def crear_entrenador1(entrenador):
 
 def crear_entrenador2(entrenador):
     try:
-        with open('coach_2_pokemons.csv', newline='') as csv:
+        with open('coach_2_pokemons.csv', newline='') as csv_file:
             lector= csv.reader('coach_1_pokemons.csv')
             info_entrenador_2=list(lector)
             for temp_pokemon_csv in info_entrenador_2:
