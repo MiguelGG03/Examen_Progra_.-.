@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import enum
+from classes.pokemon import *
 
 """
 This Python module contains not only the Enum WeaponType, but also the test of
@@ -36,52 +36,28 @@ this Python class.
 
 
 class WeaponType():
-    """Python class to implement an enumeration for the attribute Weapon Type.
-
-    This Python class implements an enumeration for the attribute Weapon Type.
-
-    Syntax
-    ------
-      obj = WeaponType.Enum
-
-    Parameters
-    ----------
-
-    Returns
-    -------
-      obj Python object output parameter that represents an instance
-          of the class WeaponType.
-
-    Attributes
-    ----------
-
-    Example
-    -------
-      >>> from weapon_type import WeaponType
-      >>> obj_WeaponType = WeaponType.Boxer
-    """
     
-    PUÑETAZO = 2
-    PATADA = 4
-    CODAZO = 6
-    CABEZAZO = 10
+    PUNCH = 2
+    KICK = 4
+    ELBOW = 6
+    HEADBUTT = 10
 
     def __str__(self):
         return self.name
 
     @staticmethod
-    
+      
     def tipo_ataque(stringdelarma):
 
         stringdelarma=stringdelarma.lower()
         if (stringdelarma == 'puñetazo'):
-            return Ataque.PUÑETAZO
+            return WeaponType.PUÑETAZO
         elif (stringdelarma == 'patada'):
-            return Ataque.PATADA
+            return WeaponType.PATADA
         elif (stringdelarma == 'codazo'):
-            return Ataque.CODAZO
+            return WeaponType.CODAZO
         elif (stringdelarma == 'cabezazo'):
-            return Ataque.CABEZAZO
+            return WeaponType.CABEZAZO
         else:
             print('***'+str(stringdelarma.upper())+' NO ES UN TIPO DE ATAQUE REGISTRADO***')
 
