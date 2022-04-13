@@ -52,14 +52,14 @@ class WeaponType(Enum):
     def tipo_ataque(stringdelarma):
 
         stringdelarma=stringdelarma.lower()
-        if (stringdelarma == 'puñetazo'):
-            return WeaponType.PUÑETAZO
-        elif (stringdelarma == 'patada'):
-            return WeaponType.PATADA
-        elif (stringdelarma == 'codazo'):
-            return WeaponType.CODAZO
-        elif (stringdelarma == 'cabezazo'):
-            return WeaponType.CABEZAZO
+        if (stringdelarma == 'punch'):
+            return WeaponType.PUNCH
+        elif (stringdelarma == 'kick'):
+            return WeaponType.KICK
+        elif (stringdelarma == 'elbow'):
+            return WeaponType.ELBOW
+        elif (stringdelarma == 'headbutt'):
+            return WeaponType.HEADBUTT
         else:
             print('***'+str(stringdelarma.upper())+' NO ES UN TIPO DE ATAQUE REGISTRADO***')
 
