@@ -1,8 +1,14 @@
-from clases.tipo_ataque import *
 
-ids_pokemons=[]
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
+from tipo_ataque import Ataque
+
 
 class pokemon:
+
+    ids_pokemons=[]  
     
     def __init__(self,id, pokemon_name, weapon_type, health_points,attack_rating, defense_rating):
         if (isinstance(id,int)==True):
@@ -128,6 +134,7 @@ class pokemon:
 
     def fight_attack(self,pokemon_to_attack):
         if(pokemon_to_attack.fight_defense(self.attack_rating)==True):
+            print(self.pokemon_name+" ha infringido "+str(self.attack_rating-pokemon_to_attack.defense_rating)+" puntos de daño\nsobre "+pokemon_to_attack.pokemon_name)
             print("La nueva vida de "+pokemon_to_attack.pokemon_name+"\nes de "
                     +str(pokemon_to_attack.health_points)+" puntos de vida.")
         else:
