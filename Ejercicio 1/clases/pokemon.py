@@ -61,13 +61,13 @@ class pokemon:
 
     def fight_defense(self,points_of_damage):
         if(self.defense_rating<points_of_damage):
+            self.health_points=self.health_points-(points_of_damage-self.defense_rating)
             return True
         else:
             return False
 
-    def fight_attack(self,pokemon_that_attacks,pokemon_to_attack):
-        if(fight_defense(pokemon_that_attacks)==True):
-            pokemon_to_attack.health_points=pokemon_to_attack.health_points-(pokemon_that_attacks.attack_rating-pokemon_to_attack.defense_rating)
+    def fight_attack(self,pokemon_to_attack):
+        if(pokemon_to_attack.fight_defense(self.attack_rating)==True):
             print("La nueva vida de "+pokemon_to_attack.pokemon_name+"\nes de "
                     +str(pokemon_to_attack.health_points)+" puntos de vida.")
         else:
