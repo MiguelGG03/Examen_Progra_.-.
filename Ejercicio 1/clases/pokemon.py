@@ -59,11 +59,19 @@ class pokemon:
         else:
             return False
 
-    def fight_attack(self,Pokemon,pokemon_to_attack):
-        print()
+    def fight_defense(self,points_of_damage):
+        if(self.defense_rating<points_of_damage):
+            return True
+        else:
+            return False
 
-    def fight_defense(self,int points_of_damage):
-
+    def fight_attack(self,pokemon_that_attacks,pokemon_to_attack):
+        if(fight_defense(pokemon_that_attacks)==True):
+            pokemon_to_attack.health_points=pokemon_to_attack.health_points-(pokemon_that_attacks.attack_rating-pokemon_to_attack.defense_rating)
+            print("La nueva vida de "+pokemon_to_attack.pokemon_name+"\nes de "
+                    +str(pokemon_to_attack.health_points)+" puntos de vida.")
+        else:
+            print("El ataque no ha sido efectivo")
 
     def elegir_ataque(self,pregunta):
         pregunta=input('Seleccione el ataque:\nPUÑETAZO \nPATADA \nCODAZO \nCABEZAZO\n-')
