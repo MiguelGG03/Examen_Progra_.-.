@@ -71,6 +71,31 @@ class pokemon:
     def get_defense_rating(self):
         return self.defense_rating
 
+    
+    def set_pokemon_name(self, pokemon_name_to_be_set):
+        if isinstance(pokemon_name_to_be_set, str):
+            self._pokemon_name = pokemon_name_to_be_set
+        else:
+            raise TypeError("El parametro pokemon_name_to_be_set deberia ser un String.")
+
+
+    def set_weapon_type(self, weapon_type_to_be_set):
+        if isinstance(weapon_type_to_be_set, Ataque):
+            self._weapon_type = weapon_type_to_be_set
+        else:
+            raise TypeError("El parametro weapon_type deberia ser un Ataque.")
+
+
+    def set_attack_rating(self, attack_rating_to_be_set):
+        if isinstance(attack_rating_to_be_set, int):
+            if 1 <= attack_rating_to_be_set <= 10:
+                self._attack_rating = attack_rating_to_be_set
+            else:
+                raise ValueError("El parametro attack_rating_to_be_set should be > 0 and <= 10.")
+        else:
+            raise TypeError("El parametro attack_rating_to_be_set deberia ser un int.")
+
+
     def set_defense_rating(self, defense_rating_to_be_set):
         if isinstance((defense_rating_to_be_set, int)==True):
             if (1 <= defense_rating_to_be_set <= 10):
@@ -84,6 +109,7 @@ class pokemon:
     def leer_stats_pokemon(self):
         print("Pokemon ID"+str(self.id)+" cuyo nombre es "+self.pokemon_name+" tiene como ataque asignado"+
                 str(self.weapon_type.upper())+" y "+self.health_points+" puntos de vida.")
+
 
     def is_alive(self):
         if(self.health_points>=1):
@@ -125,27 +151,27 @@ def main():
     pokemon_1 = pokemon(1, "Ivysaur", Ataque.CABEZAZO, 100, 8, 9)
 
     if pokemon_1.get_pokemon_name() == "Ivysaur":
-        print("Test PASS. The parameter pokemon_name has been correctly set.")
+        print("Test PASS. El parametro pokemon_name has been correctly set.")
     else:
         print("Test FAIL. Check the method __init__().")
 
     if pokemon_1.get_weapon_type().name == "CABEZAZO":
-        print("Test PASS. The parameter weapon_type has been correctly set.")
+        print("Test PASS. El parametro weapon_type has been correctly set.")
     else:
         print("Test FAIL. Check the method __init__().")
 
     if pokemon_1.get_health_points() == 100:
-        print("Test PASS. The parameter health_points has been correctly set.")
+        print("Test PASS. El parametro health_points has been correctly set.")
     else:
         print("Test FAIL. Check the method __init__().")
 
     if pokemon_1.get_attack_rating() == 8:
-        print("Test PASS. The parameter attack_rating has been correctly set.")
+        print("Test PASS. El parametro attack_rating has been correctly set.")
     else:
         print("Test FAIL. Check the method __init__().")
 
     if pokemon_1.get_defense_rating() == 9:
-        print("Test PASS. The parameter defense_rating has been correctly set.")
+        print("Test PASS. El parametro defense_rating has been correctly set.")
     else:
         print("Test FAIL. Check the method __init__().")
 
@@ -164,7 +190,7 @@ def main():
     print("=================================================================.")
     print("Test Case 3: Pokemon alive?¿?.")
     print("=================================================================.")
-    pokemon_3 = pokemon(3, "Wartortle", Ataque.KICK, 97, 8, 9)
+    pokemon_3 = pokemon(3, "Wartortle", Ataque.PATADA, 97, 8, 9)
 
     if pokemon_3.is_alive():
         pokemon_3.fight_defense(200)  # With this the Pokemon should be retired.
@@ -180,7 +206,7 @@ def main():
     print("=================================================================.")
     print("Test Case 4: Check the defense during a Fight.")
     print("=================================================================.")
-    pokemon_4 = pokemon(4, "Squirtle", Ataque.ELBOW, 93, 9, 6)
+    pokemon_4 = pokemon(4, "Squirtle", Ataque.CODAZO, 93, 9, 6)
 
     pokemon_4.fight_defense(70)
 
@@ -193,8 +219,8 @@ def main():
     print("=================================================================.")
     print("Test Case 5: Check the attack during a Fight.")
     print("=================================================================.")
-    pokemon_5 = pokemon(5, "Venusaur", Ataque.PUNCH, 99, 10, 7)
-    pokemon_6 = pokemon(6, "Charmeleon", Ataque.PUNCH, 99, 9, 8)
+    pokemon_5 = pokemon(5, "Venusaur", Ataque.CABEZAZO, 99, 10, 7)
+    pokemon_6 = pokemon(6, "Charmeleon", Ataque.CABEZAZO, 99, 9, 8)
 
     pokemon_was_hit = pokemon_5.fight_attack(pokemon_6)
 
