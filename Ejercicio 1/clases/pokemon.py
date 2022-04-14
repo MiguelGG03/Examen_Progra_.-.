@@ -1,4 +1,4 @@
-from clases.tipo_ataque import *
+from clases.tipo_ataque import Ataque
 
 ids_pokemons=[]
 
