@@ -49,6 +49,27 @@ class pokemon:
         else:
             raise TypeError("La defensa debe ser un valor entero")
 
+    def get_id(self):
+        return self.id
+
+    def get_pokemon_name(self):
+        return self.pokemon_name
+
+
+    def get_weapon_type(self):
+        return self.weapon_type
+
+
+    def get_health_points(self):
+        return self.health_points
+
+
+    def get_attack_rating(self):
+        return self.attack_rating
+
+
+    def get_defense_rating(self):
+        return self.defense_rating
 
     def set_defense_rating(self, defense_rating_to_be_set):
         if isinstance((defense_rating_to_be_set, int)==True):
