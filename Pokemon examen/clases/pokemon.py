@@ -1,4 +1,4 @@
-from clases.tipo_ataque import Ataque
+from clases.tipo_ataque import *
 
 ids_pokemons=[]
 
@@ -6,9 +6,9 @@ class pokemon:
     
     def __init__(self,id, pokemon_name, weapon_type, health_points,attack_rating, defense_rating):
         if (isinstance(id,int)==True):
-            if(id not in pokemon.global_ids):
+            if(id not in pokemon.ids_pokemons):
                 self.id=id
-                pokemon.global_ids.append(self.id)
+                pokemon.ids_pokemons.append(self.id)
             else:
                 raise ValueError("El id del pokemon deberia ser uno nuevo id y no uno repetido de otro pokemon.")
                 # "raise" es para hacer saltar un error
