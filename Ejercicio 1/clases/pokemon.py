@@ -29,25 +29,25 @@ class pokemon:
             if(1<=health_points<=100):
                 self.health_points=health_points
             else:
-                raise ValueError("La vida del poquemon debe estar entre 1 y 100")
+                raise ValueError("La vida del pokemon debe estar entre 1 y 100")
         else:
             raise TypeError("La vida debe ser un valor entero")
         
         if(isinstance(attack_rating,int)==True):
-            if(1<=attack_rating<=100):
+            if(1<=attack_rating<=10):
                 self.attack_rating=attack_rating
             else:
-                raise ValueError("La vida del poquemon debe estar entre 1 y 100")
+                raise ValueError("El ataque del pokemon debe estar entre 1 y 10")
         else:
-            raise TypeError("La vida debe ser un valor entero")
+            raise TypeError("La ataque debe ser un valor entero")
         
         if(isinstance(defense_rating,int)==True):
-            if(1<=defense_rating<=100):
+            if(1<=defense_rating<=10):
                 self.defense_rating=defense_rating
             else:
-                raise ValueError("La vida del poquemon debe estar entre 1 y 100")
+                raise ValueError("La defensa del pokemon debe estar entre 1 y 10")
         else:
-            raise TypeError("La vida debe ser un valor entero")
+            raise TypeError("La defensa debe ser un valor entero")
 
     def leer_stats_pokemon(self):
         print("Pokemon ID"+str(self.id)+" cuyo nombre es "+self.pokemon_name+" tiene como ataque asignado"+
@@ -61,6 +61,9 @@ class pokemon:
 
     def fight_attack(self,Pokemon,pokemon_to_attack):
         print()
+
+    def fight_defense(self,int points_of_damage):
+
 
     def elegir_ataque(self,pregunta):
         pregunta=input('Seleccione el ataque:\nPUÑETAZO \nPATADA \nCODAZO \nCABEZAZO\n-')
