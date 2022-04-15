@@ -7,7 +7,7 @@ from tipo_ataque import Ataque
 
 
 
-class pokemonAire(pokemon):
+class pokemonElectricidad(pokemon):
 
 
     def __init__(self, pokemon_id, pokemon_name, weapon_type, health_points,
@@ -43,7 +43,6 @@ class pokemonAire(pokemon):
 
     def fight_attack(self,pokemon_to_attack):
         n_r=int(random.randint(0,1))
-        print("__________{}___________".format(str(n_r)))
         if(n_r==0):
             if(pokemon_to_attack.fight_defense_0(self.attack_rating)==True):
                 print(self.pokemon_name+" ha infringido "+str(self.attack_rating-pokemon_to_attack.defense_rating)+" puntos de daño\nsobre "+pokemon_to_attack.pokemon_name)
@@ -69,9 +68,9 @@ def main():
     print("=================================================================.")
     print("Test 1: Crear un Pokemon.")
     print("=================================================================.")
-    pokemon_1 = pokemonAire(1, "Pidgey", Ataque.CABEZAZO, 100, 8, 7)
+    pokemon_1 = pokemonElectricidad(1, "Pikachu", Ataque.CABEZAZO, 100, 8, 7)
 
-    if pokemon_1.get_pokemon_name() == "Pidgey":
+    if pokemon_1.get_pokemon_name() == "Pikachu":
         print("Test completado. El parametro pokemon_name ha sido correctamente aplicado.")
     else:
         print("Test fallido. Revisa el metodo __init__().")
@@ -100,9 +99,9 @@ def main():
     print("=================================================================.")
     print("Test 2: Leer las stats del pokemon.")
     print("=================================================================.")
-    pokemon_2 = pokemonAire(7, "Pidgey", Ataque.CABEZAZO, 100, 7, 6)
+    pokemon_2 = pokemonElectricidad(7, "Pikachu", Ataque.CABEZAZO, 100, 7, 6)
 
-    if pokemon_2.leer_stats_pokemon() == ("Pokemon ID 7 cuyo nombre es Pidgey tiene como ataque asignado CABEZAZO y 100 puntos de vida."):
+    if pokemon_2.leer_stats_pokemon() == ("Pokemon ID 7 cuyo nombre es Pikachu tiene como ataque asignado CABEZAZO y 100 puntos de vida."):
         print("Test completado. El metodo leer_stats_pokemon ha sido implementado correctamente.")
     else:
         print("Test fallido. Revisa el metodo __str__()." + " Resultado: " + str(pokemon_2))
@@ -111,7 +110,7 @@ def main():
     print("=================================================================.")
     print("Test 3: Sigue con vida ?.")
     print("=================================================================.")
-    pokemon_3 = pokemonAire(3, "Pidgey", Ataque.PATADA, 97, 8, 7)
+    pokemon_3 = pokemonElectricidad(3, "Pikachu", Ataque.PATADA, 97, 8, 7)
 
     if pokemon_3.is_alive():
         pokemon_3.fight_defense(200)  # With this the Pokemon should be retired.
@@ -127,7 +126,7 @@ def main():
     print("=================================================================.")
     print("Test 4: Revisar la defensa durante la batalla.")
     print("=================================================================.")
-    pokemon_4 = pokemonAire(4, "Pidgey", Ataque.CODAZO, 93, 9, 5)
+    pokemon_4 = pokemonElectricidad(4, "Pikachu", Ataque.CODAZO, 93, 9, 5)
 
     pokemon_4.fight_defense(70)
 
@@ -140,8 +139,8 @@ def main():
     print("=================================================================.")
     print("Test 5: Revisar el ataque durante la batalla.")
     print("=================================================================.")
-    pokemon_5 = pokemonAire(5, "Pidgey", Ataque.PUÑETAZO, 99, 10, 8)
-    pokemon_6 = pokemonAire(6, "Pidgey", Ataque.PUÑETAZO, 99, 9, 6)
+    pokemon_5 = pokemonElectricidad(5, "Pikachu", Ataque.PUÑETAZO, 99, 10, 8)
+    pokemon_6 = pokemonElectricidad(6, "Pikachu", Ataque.PUÑETAZO, 99, 9, 6)
 
     pokemon_was_hit = pokemon_5.fight_attack(pokemon_6)
 
