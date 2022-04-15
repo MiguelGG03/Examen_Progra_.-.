@@ -38,7 +38,7 @@ def main():
     print("=================================================================.")
     print("Test 1: Crear un Pokemon.")
     print("=================================================================.")
-    pokemon_1 = pokemonTierra(1, "Diglett", Ataque.CABEZAZO, 100, 8, 15)
+    pokemon_1 = pokemonAgua(1, "Diglett", Ataque.CABEZAZO, 100, 8, 15)
 
     if pokemon_1.get_pokemon_name() == "Diglett":
         print("Test completado. El parametro pokemon_name ha sido correctamente aplicado.")
@@ -69,7 +69,7 @@ def main():
     print("=================================================================.")
     print("Test 2: Leer las stats del pokemon.")
     print("=================================================================.")
-    pokemon_2 = pokemonTierra(7, "Diglett", Ataque.CABEZAZO, 100, 7, 12)
+    pokemon_2 = pokemonAgua(7, "Diglett", Ataque.CABEZAZO, 100, 7, 12)
 
     if pokemon_2.leer_stats_pokemon() == ("Pokemon ID 7 cuyo nombre es Diglett tiene como ataque asignado CABEZAZO y 100 puntos de vida."):
         print("Test completado. El metodo leer_stats_pokemon ha sido implementado correctamente.")
@@ -80,7 +80,7 @@ def main():
     print("=================================================================.")
     print("Test 3: Sigue con vida ?.")
     print("=================================================================.")
-    pokemon_3 = pokemonTierra(3, "Diglett", Ataque.PATADA, 97, 8, 15)
+    pokemon_3 = pokemonAgua(3, "Diglett", Ataque.PATADA, 97, 8, 15)
 
     if pokemon_3.is_alive():
         pokemon_3.fight_defense(200)  # With this the Pokemon should be retired.
@@ -96,7 +96,7 @@ def main():
     print("=================================================================.")
     print("Test 4: Revisar la defensa durante la batalla.")
     print("=================================================================.")
-    pokemon_4 = pokemonTierra(4, "Diglett", Ataque.CODAZO, 93, 9, 11)
+    pokemon_4 = pokemonAgua(4, "Diglett", Ataque.CODAZO, 93, 9, 11)
 
     pokemon_4.fight_defense(70)
 
@@ -109,8 +109,8 @@ def main():
     print("=================================================================.")
     print("Test 5: Revisar el ataque durante la batalla.")
     print("=================================================================.")
-    pokemon_5 = pokemonTierra(5, "Diglett", Ataque.PUÑETAZO, 99, 10, 20)
-    pokemon_6 = pokemonTierra(6, "Diglett", Ataque.PUÑETAZO, 99, 9, 18)
+    pokemon_5 = pokemonAgua(5, "Diglett", Ataque.PUÑETAZO, 99, 10, 20)
+    pokemon_6 = pokemonAgua(6, "Diglett", Ataque.PUÑETAZO, 99, 9, 18)
 
     pokemon_was_hit = pokemon_5.fight_attack(pokemon_6)
 
