@@ -11,6 +11,8 @@ class pokemon:
     ids_pokemons=[]  
     
     def __init__(self,id, pokemon_name, weapon_type, health_points,attack_rating, defense_rating):
+        
+        
         if (isinstance(id,int)==True):
             if(id not in pokemon.ids_pokemons):
                 self.id=id
@@ -21,6 +23,7 @@ class pokemon:
         else:
             raise TypeError("El parametro id deberia ser un valor entero")
 
+        
         if(isinstance(pokemon_name,str)==True):
             self.pokemon_name=pokemon_name
         else:
@@ -31,6 +34,7 @@ class pokemon:
         else:
             raise TypeError("El tipo de ataque no pertenece a la clase /Ataque/")
                 
+        
         if(isinstance(health_points,int)==True):
             if(1<=health_points<=100):
                 self.health_points=health_points
@@ -38,6 +42,7 @@ class pokemon:
                 raise ValueError("La vida del pokemon debe estar entre 1 y 100")
         else:
             raise TypeError("La vida debe ser un valor entero")
+        
         
         if(isinstance(attack_rating,int)==True):
             if(1<=attack_rating<=10):
@@ -47,6 +52,7 @@ class pokemon:
         else:
             raise TypeError("La ataque debe ser un valor entero")
         
+       
         if(isinstance(defense_rating,int)==True):
             if(1<=defense_rating<=10):
                 self.defense_rating=defense_rating
@@ -54,6 +60,7 @@ class pokemon:
                 raise ValueError("La defensa del pokemon debe estar entre 1 y 10")
         else:
             raise TypeError("La defensa debe ser un valor entero")
+
 
     def get_id(self):
         return self.id
