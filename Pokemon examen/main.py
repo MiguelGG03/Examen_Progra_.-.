@@ -1,12 +1,11 @@
+import csv
+
 from clases.pokemon import *
 from clases.pokemon_agua import *
 from clases.pokemon_aire import *
 from clases.pokemon_electricidad import *
 from clases.pokemon_tierra import *
 
-
-
-import csv
 
 def crear_entrenador1(entrenador):
     try:
