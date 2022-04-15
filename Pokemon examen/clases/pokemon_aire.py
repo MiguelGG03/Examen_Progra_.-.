@@ -1,11 +1,13 @@
 #Importando los modulos
+import random
+
 
 from pokemon import pokemon
 from tipo_ataque import Ataque
 
 
 
-class pokemonTierra(pokemon):
+class pokemonAire(pokemon):
 
 
     def __init__(self, pokemon_id, pokemon_name, weapon_type, health_points,
@@ -13,24 +15,19 @@ class pokemonTierra(pokemon):
 
 
         super().__init__(pokemon_id, pokemon_name, weapon_type, health_points,
-                 attack_rating, 10)
-            
-        if(isinstance(defense_rating,int)==True):
-            if(11<=defense_rating<=20):
-                self.defense_rating=defense_rating
+                 attack_rating, defense_rating)
+
+    def fight_defense(self,points_of_damage):
+        n_r=int(random.randint(0,2))
+        if(not isinstance(points_of_damage,int)):
+            raise TypeError("El parametro points_of_damage deberia ser un int.") 
+        else:   
+            if(self.defense_rating<points_of_damage):
+                self.health_points=self.health_points-(points_of_damage-self.defense_rating)*n_r
+                print(n_r)
+                return True
             else:
-                raise ValueError("La defensa del pokemon debe estar entre 1 y 10")
-        else:
-            raise TypeError("La defensa debe ser un valor entero")
-    
-    def set_defense_rating(self, defense_rating_to_be_set):
-        if isinstance((defense_rating_to_be_set, int)==True):
-            if (11 <= defense_rating_to_be_set <= 20):
-                self.defense_rating = defense_rating_to_be_set
-            else:
-                raise ValueError("El parametro defense_rating_to_be_set deberia estar entre 1 y 10")
-        else:
-            raise TypeError("El parametro defense_rating_to_be_set deberia ser un int")
+                return False
 
 
 def main():
