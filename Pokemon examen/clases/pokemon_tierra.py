@@ -19,5 +19,11 @@ class pokemonTierra(pokemon):
         else:
             raise TypeError("La defensa debe ser un valor entero")
     
-    def get_defense_rating(self):
-        return self.defense_rating
+    def set_defense_rating(self, defense_rating_to_be_set):
+        if isinstance((defense_rating_to_be_set, int)==True):
+            if (1 <= defense_rating_to_be_set <= 10):
+                self.defense_rating = defense_rating_to_be_set
+            else:
+                raise ValueError("El parametro defense_rating_to_be_set deberia estar entre 1 y 10")
+        else:
+            raise TypeError("El parametro defense_rating_to_be_set deberia ser un int")
