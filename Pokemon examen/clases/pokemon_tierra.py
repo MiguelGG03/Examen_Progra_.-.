@@ -67,7 +67,7 @@ def main():
     print("=================================================================.")
     pokemon_2 = pokemonTierra(7, "Diglett", Ataque.CABEZAZO, 100, 7, 12)
 
-    if pokemon_2.leer_stats_pokemon() == "Pokemon ID 7 cuyo nombre es Diglett tiene como ataque asignado CABEZAZO y 100 puntos de vida.":
+    if pokemon_2.leer_stats_pokemon() == ("Pokemon ID 7 cuyo nombre es Diglett tiene como ataque asignado CABEZAZO y 100 puntos de vida."):
         print("Test completado. El metodo leer_stats_pokemon ha sido implementado correctamente.")
     else:
         print("Test fallido. Revisa el metodo __str__()." + " Resultado: " + str(pokemon_2))
