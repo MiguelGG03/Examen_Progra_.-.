@@ -5,6 +5,7 @@ from clases.pokemon_agua import *
 from clases.pokemon_aire import *
 from clases.pokemon_electricidad import *
 from clases.pokemon_tierra import *
+from clases.tipo_ataque import Ataque
 
 
 def crear_entrenador1(entrenador):
