@@ -34,15 +34,16 @@ class pokemonAire(pokemon):
             raise TypeError("El parametro points_of_damage deberia ser un int.") 
         else:   
             if(self.defense_rating<points_of_damage):
-                h=points_of_damage-self.defense_rating
+                h=(points_of_damage*2)-self.defense_rating
                 self.health_points=self.health_points-h
                 return True
             else:
                 return False
-                
+
 
     def fight_attack(self,pokemon_to_attack):
         n_r=int(random.randint(0,1))
+        print("__________{}___________".format(str(n_r)))
         if(n_r==0):
             if(pokemon_to_attack.fight_defense_0(self.attack_rating)==True):
                 print(self.pokemon_name+" ha infringido "+str(self.attack_rating-pokemon_to_attack.defense_rating)+" puntos de daño\nsobre "+pokemon_to_attack.pokemon_name)
@@ -54,7 +55,7 @@ class pokemonAire(pokemon):
                 return False
         else:
             if(pokemon_to_attack.fight_defense_1(self.attack_rating)==True):
-                print(self.pokemon_name+" ha infringido "+str((self.attack_rating)*2-pokemon_to_attack.defense_rating)+" puntos de daño\nsobre "+pokemon_to_attack.pokemon_name)
+                print(self.pokemon_name+" ha infringido "+str((self.attack_rating*2)-pokemon_to_attack.defense_rating)+" puntos de daño\nsobre "+pokemon_to_attack.pokemon_name)
                 print("La nueva vida de "+pokemon_to_attack.pokemon_name+"\nes de "
                         +str(pokemon_to_attack.health_points)+" puntos de vida.")
                 return True
