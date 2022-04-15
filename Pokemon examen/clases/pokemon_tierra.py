@@ -21,7 +21,7 @@ class pokemonTierra(pokemon):
     
     def set_defense_rating(self, defense_rating_to_be_set):
         if isinstance((defense_rating_to_be_set, int)==True):
-            if (1 <= defense_rating_to_be_set <= 10):
+            if (11 <= defense_rating_to_be_set <= 20):
                 self.defense_rating = defense_rating_to_be_set
             else:
                 raise ValueError("El parametro defense_rating_to_be_set deberia estar entre 1 y 10")
