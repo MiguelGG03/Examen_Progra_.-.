@@ -1,7 +1,7 @@
 #Importando los modulos
 
-from clases.pokemon import pokemon
-from clases.tipo_ataque import Ataque
+from pokemon import pokemon
+from tipo_ataque import Ataque
 
 
 
