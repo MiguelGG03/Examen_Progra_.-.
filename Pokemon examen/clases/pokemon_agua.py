@@ -5,7 +5,7 @@ from tipo_ataque import Ataque
 
 
 
-class pokemonTierra(pokemon):
+class pokemonAgua(pokemon):
 
 
     def __init__(self, pokemon_id, pokemon_name, weapon_type, health_points,
