@@ -13,24 +13,24 @@ class pokemonAgua(pokemon):
 
 
         super().__init__(pokemon_id, pokemon_name, weapon_type, health_points,
-                 attack_rating, 10)
+                 10, defense_rating)
             
-        if(isinstance(defense_rating,int)==True):
-            if(11<=defense_rating<=20):
-                self.defense_rating=defense_rating
+        if(isinstance(attack_rating,int)==True):
+            if(11<=attack_rating<=20):
+                self.attack_rating=attack_rating
             else:
-                raise ValueError("La defensa del pokemon debe estar entre 1 y 10")
+                raise ValueError("El ataque del pokemon debe estar entre 1 y 10")
         else:
-            raise TypeError("La defensa debe ser un valor entero")
+            raise TypeError("La ataque debe ser un valor entero")
     
-    def set_defense_rating(self, defense_rating_to_be_set):
-        if isinstance((defense_rating_to_be_set, int)==True):
-            if (11 <= defense_rating_to_be_set <= 20):
-                self.defense_rating = defense_rating_to_be_set
+    def set_attack_rating(self, attack_rating_to_be_set):
+        if isinstance(attack_rating_to_be_set, int):
+            if 11 <= attack_rating_to_be_set <= 20:
+                self._attack_rating = attack_rating_to_be_set
             else:
-                raise ValueError("El parametro defense_rating_to_be_set deberia estar entre 1 y 10")
+                raise ValueError("El parametro attack_rating_to_be_set should be > 0 and <= 10.")
         else:
-            raise TypeError("El parametro defense_rating_to_be_set deberia ser un int")
+            raise TypeError("El parametro attack_rating_to_be_set deberia ser un int.")
 
 
 def main():
