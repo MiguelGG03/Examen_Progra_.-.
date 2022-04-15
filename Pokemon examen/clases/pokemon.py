@@ -146,9 +146,10 @@ class pokemon:
             print(self.pokemon_name+" ha infringido "+str(self.attack_rating-pokemon_to_attack.defense_rating)+" puntos de daño\nsobre "+pokemon_to_attack.pokemon_name)
             print("La nueva vida de "+pokemon_to_attack.pokemon_name+"\nes de "
                     +str(pokemon_to_attack.health_points)+" puntos de vida.")
+            return True
         else:
             print("El ataque no ha sido efectivo")
-
+            return False
 
     def elegir_ataque(self,pregunta):
         pregunta=input('Seleccione el ataque:\nPUÑETAZO \nPATADA \nCODAZO \nCABEZAZO\n-')
@@ -241,12 +242,12 @@ def main():
     pokemon_was_hit = pokemon_5.fight_attack(pokemon_6)
 
     if pokemon_was_hit:
-        if pokemon_6.get_health_points() == 97:
+        if (pokemon_6.get_health_points() == 97):
             print("Test completado. El metodo fight_attack() ha sido implementado correctamente.")
         else:
             print("Test fallido. Revisa el metodo fight_attack().")
     else:
-        if pokemon_6.get_health_points() == 99:
+        if (pokemon_6.get_health_points() == 99):
             print("Test completado. El metodo fight_attack() ha sido implementado correctamente.")
         else:
             print("Test fallido. Revisa el metodo fight_attack().")
