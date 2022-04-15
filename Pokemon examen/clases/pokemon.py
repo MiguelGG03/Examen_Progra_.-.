@@ -113,7 +113,8 @@ class pokemon:
 
 
     def leer_stats_pokemon(self):
-        print("Pokemon ID "+str(self.id)+" cuyo nombre es "+self.pokemon_name+" tiene como ataque asignado"+
+        str_id=str(self.id)
+        print("Pokemon ID "+str_id+" cuyo nombre es "+self.pokemon_name+" tiene como ataque asignado"+
                 str(self.weapon_type).upper()+" y "+self.health_points+" puntos de vida.")
 
 
